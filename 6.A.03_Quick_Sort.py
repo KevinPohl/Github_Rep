@@ -1,7 +1,7 @@
 #-----------------------------------------------------
-# Filename: 6.A.02.py
+# Filename: 6.A.03_Quick_Sort.py
 # Version: 1.0
-# Function: Assignment 2 from chapter 6
+# Function: Assignment 3 from chapter 6
 # Author: Kevin Pohl
 # Last Change: 04.07.23
 #-----------------------------------------------------
