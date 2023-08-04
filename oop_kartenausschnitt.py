@@ -80,7 +80,7 @@ class MapApp():
                     # Die Formel wählt hierfür die rechnerische Mitte der eingegrenzten Koordinaten.
                     lat_0=(self.lowerleftlat+self.upperrightlat)*0.5,
                     # Hier ebenfalls einfach: Die hier eingestellte Longitude ist auf dem Bild perfekt horizontal,
-                    # auch diese diese muss nicht Teil des Bildes sein.
+                    # auch diese muss nicht Teil des Bildes sein.
                     # Auch hierfür wählt die Formel die rechnerische Mitte der eingegrenzten Koordinaten.
                     lon_0=(self.lowerleftlon+self.upperrightlon)*0.5)
 
