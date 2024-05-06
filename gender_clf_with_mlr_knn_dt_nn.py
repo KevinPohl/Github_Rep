@@ -533,6 +533,10 @@ class NeuralNetworkClassifier:
         l3o: layer 3 output
         l3e: layer 3 error
         l2e: layer 2 error
+
+        clarifications
+        layer input: either raw input at l1 or activated output of leading layer
+        layer output: layer input matmul with weights
         """
         self._X_train = X
         self._y_train = y
@@ -558,6 +562,9 @@ class NeuralNetworkClassifier:
             l2e = self.l2_weights.T @ l3e
             self.l2_weights += self.learning_rate * (self._sigmoid(l3i, derivative= True) * l3e) @ l2i.T
             self.l1_weights += self.learning_rate * (self._sigmoid(l2i, derivative= True) * l2e) @ l1i.T
+            # more plainly:
+            # [actualized_l2w] = [l2w] + [lr] * ([derivative_activation_of_l3i] * l3e) @ [l2i]
+            # [actualized_l1w] = [l1w] + [lr] * ([derivative_activation_of_l2i] * l2e) @ [l1i]
             pass
 
         self._set_train_acc()
